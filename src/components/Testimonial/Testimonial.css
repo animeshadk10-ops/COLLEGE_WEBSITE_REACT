@@ -1,0 +1,161 @@
+/* ========================================
+   TESTIMONIAL SECTION
+   ======================================== */
+.testimonial {
+    margin: var(--spacing-2xl) auto;
+    padding: 0 var(--spacing-2xl);
+    position: relative;
+    max-width: 1200px;
+}
+
+/* Navigation Buttons */
+.next-btn,
+.back-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-normal);
+    z-index: 10;
+}
+
+.next-btn:hover,
+.back-btn:hover {
+    background: var(--glass-bg-hover);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 30px var(--accent-glow);
+}
+
+.back-btn {
+    right: auto;
+    left: 0;
+}
+
+/* Slider Container */
+.slider {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+}
+
+.slider ul {
+    display: flex;
+    width: 200%;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slider ul li {
+    list-style: none;
+    width: 50%;
+    padding: var(--spacing-md);
+}
+
+/* Testimonial Card */
+.slide {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    transition: var(--transition-normal);
+}
+
+.slide:hover {
+    background: var(--glass-bg-light);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* User Info */
+.userinfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-md);
+}
+
+.userinfo img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-primary);
+    box-shadow: 0 4px 15px var(--accent-glow);
+    object-fit: cover;
+}
+
+.userinfo h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.userinfo span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.slide p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .testimonial {
+        padding: 0 var(--spacing-xl);
+    }
+
+    .next-btn,
+    .back-btn {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+    }
+
+    .slide {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .next-btn {
+        right: -10px;
+    }
+
+    .back-btn {
+        left: -10px;
+    }
+
+    .slider ul li {
+        padding: var(--spacing-sm);
+    }
+
+    .userinfo {
+        flex-direction: column;
+        text-align: center;
+    }
+}

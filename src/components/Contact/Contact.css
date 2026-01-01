@@ -1,0 +1,133 @@
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+.contact {
+    margin: var(--spacing-2xl) auto;
+    max-width: 1200px;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-2xl);
+}
+
+.contact-col {
+    flex: 1;
+}
+
+.contact-col h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-col h3 img {
+    width: 35px;
+    height: 35px;
+    margin-left: var(--spacing-sm);
+    filter: brightness(0) invert(1);
+}
+
+.contact-col p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-col ul li {
+    display: flex;
+    align-items: center;
+    margin: var(--spacing-md) 0;
+    color: var(--text-secondary);
+}
+
+.contact-col ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: var(--spacing-sm);
+    filter: brightness(0) invert(1);
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form label {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+}
+
+.contact form input,
+.contact form textarea {
+    display: block;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur-sm));
+    -webkit-backdrop-filter: blur(var(--blur-sm));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 15px;
+    outline: 0;
+    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-xs);
+    resize: none;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition-normal);
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: var(--accent-primary);
+    background: var(--glass-bg-light);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.contact form button {
+    margin-top: var(--spacing-sm);
+    align-self: flex-start;
+}
+
+.contact-col span {
+    display: block;
+    margin: var(--spacing-md) 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 968px) {
+    .contact {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .contact form button {
+        width: 100%;
+    }
+}
