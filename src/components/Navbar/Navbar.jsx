@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
+        <nav className={` ${sticky ? 'dark-nav' : ''}`}>
             <img src={logo} alt="College Logo" className='logo' />
 
             {/* Hamburger Icon */}
