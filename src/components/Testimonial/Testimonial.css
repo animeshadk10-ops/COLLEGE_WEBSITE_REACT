@@ -135,6 +135,17 @@
     .slide {
         padding: var(--spacing-lg);
     }
+
+    /* Mobile Slider: Show 1 slide */
+    .slider ul {
+        width: 400%;
+        /* 4 slides * 100% each */
+    }
+
+    .slider ul li {
+        width: 25%;
+        /* 1/4 of the 400% container = 100% of viewport */
+    }
 }
 
 @media (max-width: 480px) {
@@ -148,10 +159,6 @@
 
     .back-btn {
         left: -10px;
-    }
-
-    .slider ul li {
-        padding: var(--spacing-sm);
     }
 
     .userinfo {

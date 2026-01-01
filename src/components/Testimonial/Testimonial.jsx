@@ -17,11 +17,20 @@ const Testimonial = () => {
     let tx = useRef(0);
 
     const slideForward = () => {
-        if (tx.current > -50) {
-            tx.current -= 25;
+        if (window.innerWidth < 768) {
+            // Mobile: 1 slide at a time, scroll up to -75% (4th slide)
+            if (tx.current > -75) {
+                tx.current -= 25;
+            }
+        } else {
+            // Desktop: 2 slides at a time, scroll up to -50% (showing 3rd & 4th)
+            if (tx.current > -50) {
+                tx.current -= 25;
+            }
         }
         slider.current.style.transform = `translateX(${tx.current}%)`;
     }
+
     const slideBackward = () => {
         if (tx.current < 0) {
             tx.current += 25;
